@@ -1,0 +1,34 @@
+.wrap {
+  display: grid;
+  align-items: center;
+  min-height: 60vh;
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.wrap h1 {
+  margin-bottom: 1rem;
+}
+
+.wrap :global(.lead) {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
+.code {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}

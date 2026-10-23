@@ -1,0 +1,64 @@
+.story {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.story :global(.prose) {
+  max-width: 46rem;
+  font-size: var(--step-1);
+}
+
+@media (min-width: 900px) {
+  .story {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+}
+
+.teamTitle {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.person {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--line);
+}
+
+.portrait {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bio {
+  max-width: 44rem;
+}
+
+.bio h3 {
+  font-size: var(--step-3);
+}
+
+.role {
+  margin: 0.35rem 0 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--pink);
+}
+
+.bio :global(.btn) {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 760px) {
+  .person {
+    grid-template-columns: 220px 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+  .portrait {
+    width: 220px;
+    height: 220px;
+  }
+}

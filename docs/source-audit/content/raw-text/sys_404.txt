@@ -1,0 +1,15 @@
+URL: https://www.yinyogaworld.yoga/xyz-not-exist
+STATUS: 404
+TITLE: 404 Error: Page Not Found
+META DESCRIPTION: 
+OG:TITLE: 
+OG:IMAGE: 
+CANONICAL: None
+ROBOTS: noindex
+H-TAGS: [["H2", "ERROR: PAGE NOT FOUND"], ["H1", "404"]]
+
+=== RENDERED TEXT (desktop 1440, captured 2026-10-23) ===
+ERROR: PAGE NOT FOUND
+404
+This page isn’t available.
+Go to Homepage

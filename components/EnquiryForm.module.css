@@ -1,0 +1,91 @@
+.form {
+  display: grid;
+  gap: 1.15rem;
+  padding: clamp(1.25rem, 3.5vw, 2.25rem);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: 0 24px 60px -40px rgba(38, 50, 74, 0.45);
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #cfc7b9;
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 7rem;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(67, 150, 152, 0.2);
+}
+
+.field [aria-invalid='true'] {
+  border-color: var(--pink);
+}
+
+.error {
+  font-size: 0.85rem;
+  color: var(--pink-deep);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.actions :global(.btn) {
+  flex: 1 1 15rem;
+}
+
+.help {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.status:empty {
+  display: none;
+}
+
+.status {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--teal-tint);
+  color: var(--teal-deep);
+  font-size: 0.9rem;
+}

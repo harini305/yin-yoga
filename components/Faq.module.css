@@ -1,0 +1,112 @@
+.faq {
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+}
+
+.item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  font-family: var(--font-heading);
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+.item summary::-webkit-details-marker {
+  display: none;
+}
+
+.item summary:hover {
+  color: var(--pink);
+}
+
+.icon {
+  position: relative;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  transition: transform 0.3s var(--ease), border-color 0.2s ease;
+}
+
+.icon::before,
+.icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 1.5px;
+  margin: -0.75px 0 0 -5px;
+  background: currentColor;
+}
+
+.icon::after {
+  transform: rotate(90deg);
+  transition: transform 0.3s var(--ease);
+}
+
+.item[open] .icon {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.item[open] .icon::after {
+  transform: rotate(0deg);
+}
+
+.answer {
+  max-width: 44rem;
+  padding: 0 0 1.4rem;
+}
+
+.item[open] .answer {
+  animation: answer-in 0.35s var(--ease);
+}
+
+@keyframes answer-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+.rundown {
+  width: 100%;
+  margin-top: 0.75rem;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.rundown th,
+.rundown td {
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.rundown th {
+  width: 8.5rem;
+  font-weight: 500;
+  color: var(--teal-text);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item[open] .answer {
+    animation: none;
+  }
+}

@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.vercel/
+*.log
+.DS_Store
+Thumbs.db
+.env*.local
+
+# Full-size Wix originals (66 MB). The site uses the optimised copies in public/images;
+# keep the originals locally (or in shared storage) to re-run `npm run images`.
+assets-source/
+
+# Raw Phase 1 audit evidence (screenshots and crawl dumps, about 22 MB). The audit reports themselves are kept.
+docs/source-audit/screenshots/
+docs/source-audit/data/

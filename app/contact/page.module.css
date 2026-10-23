@@ -1,0 +1,88 @@
+.contact {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) var(--section);
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+  align-items: start;
+}
+
+.info {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.channels {
+  list-style: none;
+  display: grid;
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.channels li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.75rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 0.15rem;
+  color: var(--teal-text);
+}
+
+.channels p {
+  margin: 0;
+}
+
+.channelName {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.channelRole {
+  margin-bottom: 0.2rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.channels a {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.block {
+  display: block;
+}
+
+.address {
+  display: grid;
+  margin-bottom: 0.35rem;
+  font-style: normal;
+  font-size: 0.92rem;
+}
+
+.socials {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.formTitle {
+  margin-bottom: 1.25rem;
+  font-size: var(--step-2);
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 5.5rem);
+  }
+  .formCol {
+    position: sticky;
+    top: calc(var(--header-h) + 1.5rem);
+  }
+}
